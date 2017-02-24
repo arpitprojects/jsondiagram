@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			C-12 CHALLENGE!
+		</title>
+		<link rel="stylesheet" href="resources/css/main.css"/>
+	
+		<!--No framework but FONTS-->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="node_modules\jquery\dist\jquery.js"></script>
+		<script src="resources/sigma.min.js"></script>
+		<script src="resources/sigma.parsers.json.min.js"></script>
+		<script src="resources/js/main.js"></script>
+		<script src="resources/js/main1.js"></script>
+		<script src="resources/js/graph.js"></script>
+		
+		
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="row">
+				<div class="sm-6">
+				<button class="btn" id="butto" onclick="clear()">Reset</button>
+				<p>Enter source and destination from - [s,t,u,v,w,x]</p>
+					<br />
+					<br />
+					<div class="group">      
+					  <input type="text" id="s" maxlength="1"  required>
+					  <span class="highlight"></span>
+					  <span class="bar"></span>
+					  <label>Source</label>
+					</div>
+					<br />
+					
+					<div class="group">      
+					  <input type="text" id="d" maxlength="1" required>
+					  <span class="highlight"></span>
+					  <span class="bar"></span>
+					  <label>Destination</label>
+					</div>
+					
+					
+					
+					<button class="btn" onclick="shorten()" id="short" >Find Shortest Path</button>
+					<button class="btn" onclick="quick()" id="quick">Find Quickest Path</button>
+					<p style="font-size:14px;color:red" > Do click on RESET for going for other options.</p>
+					<br/><br/>
+					<div id="main"> </div>
+					<ul id="append">
+						
+					</ul>
+				</div>
+				<div id="container" class="sm-6">
+				
+				<br />
+				<p style="font-size:14px;color:red;float:right;">Hover on the node to get NODE NAME</p>
+				</div>
+				
+			</div>
+		</div>
+		<script>
+		$('#butto').click(function(){
+		
+						$('#append , #main').html("");
+						var s = document.getElementById('s').value = "";
+	var d = document.getElementById('d').value = "";
+						
+					});
+					</script>
+	</body>
+</html>
